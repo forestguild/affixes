@@ -8,13 +8,14 @@
 
 ```bash
 jekyll wowaffixess --region eu
+# file '_data/affixes_eu.json' will be created
 ```
 
 ### Render
 
 ```html
 <div class="row text-center">
-    {% for id in site_data_affixes['current'] %}
+    {% for id in site.data.affixes_eu['current'] %}
     {% assign affix = site.data.affixes.list | where: 'id', id %}
     <div class="col">
         <a href="https://ru.wowhead.com/affix={{ id }}" data-wh-rename-link="false">
